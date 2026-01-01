@@ -8,7 +8,7 @@ A Claude Code-powered system for discovering and tracking specialty coffee in th
 
 2. **Clone this repo**
    ```bash
-   git clone https://github.com/your-username/clawd-cawfee.git
+   git clone https://github.com/rohitshetty/clawd-cawfee.git
    cd clawd-cawfee
    ```
 
