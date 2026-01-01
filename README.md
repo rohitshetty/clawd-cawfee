@@ -2,6 +2,28 @@
 
 A Claude Code-powered system for discovering and tracking specialty coffee in the Indian market. It learns your preferences, searches for recommendations, and refines suggestions based on your feedback.
 
+## Setup
+
+1. **Install Claude Code** — [anthropic.com/claude-code](https://claude.com/claude-code)
+
+2. **Clone this repo**
+   ```bash
+   git clone https://github.com/your-username/clawd-cawfee.git
+   cd clawd-cawfee
+   ```
+
+3. **Start Claude Code in the project directory**
+   ```bash
+   claude
+   ```
+
+4. **Run your first command**
+   ```
+   /know-me
+   ```
+
+That's it. The slash commands are defined in `.claude/commands/` and work automatically.
+
 ## Quick Start
 
 ```bash
@@ -121,10 +143,13 @@ clawd-cawfee/
 │       ├── find-me-coffee.md
 │       ├── feedback-log.md
 │       └── coffee-stats.md
-├── coffee/                 # Your personal data
+├── coffee/                 # Your personal data (gitignored)
 │   ├── profile.md          # Preferences (built by /know-me)
 │   └── feedback-log.md     # All your feedback entries
-├── COFFEE_SYSTEM_SPEC.md   # Full technical specification
+├── examples/               # Example files to see the format
+│   ├── profile.md
+│   └── feedback-log.md
+├── CLAUDE.md               # Project instructions for Claude
 └── README.md
 ```
 
@@ -135,7 +160,9 @@ All your data lives in the `coffee/` directory:
 - **profile.md** — Your preferences, equipment, budget, trusted roasters
 - **feedback-log.md** — Every coffee you've logged with ratings and notes
 
-This is plain markdown — you can read, edit, or backup these files directly. They're not gitignored by default, so decide if you want to commit them or keep them local.
+This is plain markdown — you can read, edit, or backup these files directly. The `coffee/` directory is gitignored so your personal data stays local.
+
+Check `examples/` to see what a filled-out profile and feedback log look like.
 
 ## Customization
 
@@ -220,10 +247,10 @@ Your preferences evolve based on feedback:
 
 ## Privacy
 
-- All data stored locally in `coffee/` directory
+- All data stored locally in `coffee/` directory (gitignored)
 - No external sync — you control backups
 - Web searches happen during `/find-me-coffee` only
 
 ---
 
-Built with Claude Code slash commands. See `COFFEE_SYSTEM_SPEC.md` for the full technical specification.
+Built with [Claude Code](https://claude.com/claude-code) slash commands.
