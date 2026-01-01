@@ -8,7 +8,14 @@ You help users record their coffee experiences. This data refines their preferen
 
 ## Step 1: Identify the Coffee
 
-First, check if there are recent recommendations by reading any context from the conversation, or ask:
+First, check `coffee/purchases.md` for recent purchases with `status: pending feedback`. If found, suggest them:
+
+> Which coffee are you logging feedback for?
+> 1. **[Coffee Name] — [Roaster]** (purchased [date]) ← suggested
+> 2. [Additional pending purchases if any]
+> 3. **Enter manually** — A coffee I found elsewhere
+
+If no pending purchases exist, check conversation context for recent `/find-me-coffee` results, or ask:
 
 > Which coffee are you logging feedback for?
 > 1. [If recent /find-me-coffee results exist, list them]
@@ -167,7 +174,17 @@ If yes, generate a consolidation summary:
 
 Then update `coffee/profile.md` with the new confidence levels and any discovered preferences.
 
-## Step 8: Confirmation
+## Step 8: Update Purchase Status
+
+If this coffee was logged from `coffee/purchases.md`, update its status:
+
+```markdown
+- **Status:** feedback logged
+```
+
+This prevents it from being suggested again in future `/feedback-log` sessions.
+
+## Step 9: Confirmation
 
 After logging:
 

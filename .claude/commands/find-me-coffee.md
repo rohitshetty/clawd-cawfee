@@ -199,6 +199,22 @@ Mood today: [their selection from Step 1]
 After presenting the list:
 > Want more details on any of these? Just ask about a specific one and I'll dig deeper into reviews, brewing tips, and what to expect.
 
+## Step 7: Track Purchases
+
+If the user mentions they're going to buy, just bought, or are purchasing any of the recommended coffees, log it to `coffee/purchases.md`:
+
+```markdown
+## [Coffee Name] — [Roaster]
+- **Date:** [YYYY-MM-DD]
+- **Price:** ₹[price]/[weight]
+- **Link:** [product URL]
+- **Status:** pending feedback
+```
+
+Update the status to `feedback logged` once they run `/feedback-log` for this coffee.
+
+This enables `/feedback-log` to auto-suggest recent purchases.
+
 ## Implicit Wishlist Tracking
 
 Coffees with match score > 80% that the user hasn't tried are implicitly wishlisted. These will surface in `/coffee-stats`.
